@@ -1,16 +1,34 @@
 <!doctype html>
-<html>
+<html lang="fr">
 <head>
-    <title>This is the title of the webpage!</title>
+    <title>Page de test Intégration OneTrust</title>
 
     <link rel="stylesheet" type="text/css" href="assets/styles.css">
+
+    <!-- Démarrage de mention de consentement aux cookies de OneTrust -->
+
+    <script src="https://cdn.cookielaw.org/langswitch/f585acd9-c580-4dad-892a-ee1dc522e765.js" type="text/javascript" charset="UTF-8"></script>
+
+    <script type="text/javascript">
+
+        function OptanonWrapper() { }
+
+    </script>
+
+    <!-- Fin de mention de consentement aux cookies de OneTrust -->
 </head>
 <body>
 <div class="hero-image">
     <div class="hero-text">
         <h1>Hello</h1>
-        <p>This is a oneTrust Integration test page</p>
-        <button>A Button</button>
+        <p>Ceci est une page de test pour l'intégration OneTrust</p>
+
+        <h1>Lien des paramètres</h1>
+        <a class="optanon-show-settings">Paramètres des cookies</a>
+
+        <h1>Liste des cookies OneTrust</h1>
+        <div id="optanon-cookie-policy"></div>
+
     </div>
 </div>
 
