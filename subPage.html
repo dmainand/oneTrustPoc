@@ -25,6 +25,28 @@
         <a class="optanon-show-settings">Paramètres des cookies</a>
         <br/>
     </div>
+    <h1>Test Iframe</h1>
+    <script type="text/plain" class="optanon-category-2">
+        document.querySelector("#iframe-fallback").remove();
+    </script>
+    <div>
+        <iframe width="560" height="315"
+                frameborder="0" allowfullscreen=""
+                data-src="https://www.youtube.com/embed/3KSC8nRlhbs"
+                class="optanon-category-2">
+        </iframe>
+        <div  id="iframe-fallback" style="width:560px; height:315px; background-color: grey;
+            position:relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            top: -315px" >
+            <p>La lecture de cette vidéo nécessite l'autorisation des <strong>cookies de mesure d'audience</strong></p>
+            <button onclick="Optanon.ToggleInfoDisplay()">Changer mes préférences</button>
+        </div>
+
+    </div>
 </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
