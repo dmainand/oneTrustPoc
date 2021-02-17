@@ -8,11 +8,12 @@
 <p> <strong>Syntaxe de l'url d'appel:</strong> <span id="callExemple"></span></p>
 <p>
     <strong>Identifiant actuel:</strong> <span id="scriptId"></span>
+    <br/>
 </p>
 <p id="otActions" style="display: none">
     <button onclick="OneTrust.ToggleInfoDisplay()">Afficher le centre de préférence</button>
     <br/>
-    <button onclick="OneTrust.ReconsentGroups();window.location.reload()">Afficher la banniere</button>
+    <button onclick="window.localStorage.clear();window.location.reload()">Réinitialiser le consentement et recharger</button>
 </p>
 </body>
 
@@ -29,6 +30,7 @@
         otScript.setAttribute("data-document-language", "true");
         otScript.setAttribute("type", "text/javascript");
         otScript.setAttribute("charset", "UTF-8");
+        otScript.setAttribute("amp", "true");
         otScript.setAttribute("data-domain-script", scriptId);
         document.head.appendChild(otScript);
 
