@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <title>Page de test Intégration OneTrust</title>
+</head>
+<body>
+<h1> Test d'affichage oneTrust </h1>
+<p> <strong>Syntaxe de l'url d'appel:</strong> <span id="callExemple"></span></p>
+<p>
+    <strong>Identifiant actuel:</strong> <span id="scriptId"></span>
+</p>
+<p id="otActions" style="display: none">
+    <button onclick="OneTrust.ToggleInfoDisplay()">Afficher le centre de préférence</button>
+    <br/>
+    <button onclick="OneTrust.ReconsentGroups();window.location.reload()">Afficher la banniere</button>
+</p>
+</body>
+
+<script type="text/javascript">
+    const searchParams = new URLSearchParams(window.location.search);
+    const scriptId = searchParams.get("scriptId") ;
+
+    document.querySelector("#callExemple").textContent = `${window.location.origin}${window.location.pathname}?scriptId=xxxx-id-onetrust-xxxx`;
+    document.querySelector("#scriptId").textContent = scriptId|| "INVALIDE";
+    if ( scriptId ){
+
+        const otScript = document.createElement("script");
+        otScript.setAttribute("src", "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js");
+        otScript.setAttribute("data-document-language", "true");
+        otScript.setAttribute("type", "text/javascript");
+        otScript.setAttribute("charset", "UTF-8");
+        otScript.setAttribute("data-domain-script", scriptId);
+        document.head.appendChild(otScript);
+
+        document.querySelector("#otActions").removeAttribute("style");
+
+
+    }
+
+
+</script>
+
+</html>
