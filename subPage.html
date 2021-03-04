@@ -35,18 +35,28 @@
                 data-src="https://www.youtube.com/embed/3KSC8nRlhbs"
                 class="optanon-category-2">
         </iframe>
-        <div  id="iframe-fallback" style="width:560px; height:315px; background-color: grey;
+        <div  id="iframe-fallback" style="
+            width:560px;
+            height:315px;
+            background-color: grey;
             position:relative;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            top: -315px" >
-            <p>La lecture de cette vidéo nécessite l'autorisation des <strong>cookies de mesure d'audience</strong></p>
+            top: -315px;" >
+            <p>La lecture de cette vidéo nécessite l'autorisation des <strong>cookies d'audience</strong></p>
             <button onclick="Optanon.ToggleInfoDisplay()">Changer mes préférences</button>
         </div>
-
     </div>
+    <p>
+    <h2>Texte alternatif</h2>
+    <br/>
+    <p>La lecture de cette vidéo nécessite l'activation des <strong>cookies de réseaux sociaux</strong>.
+        En cliquant sur le bouton ci-dessous, vous acceptez le dépôt de ces cookies sur votre terminal.
+        Vous pouvez à tout moment modifier ce choix en cliquant sur le lien <a onclick="OneTrust.ToggleInfoDisplay()"><strong>Gérer mes cookies</strong></a>.</p>
+    <button onclick="OneTrust.ToggleInfoDisplay()">Lire la vidéo</button>
+    </p>
 </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
